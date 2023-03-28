@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #111111;
+  background: #ffffff;
+  font-family: "Playfair Display", serif;
+}
+
+a {
+  text-decoration: none;
+  color: #181818;
+}
+
+main footer .arrows {
+  display: flex;
+  align-items: center;
+}
+
+main footer .idea .img-container img,
+main footer .idea .img-container,
+main footer .idea,
+main::after {
+  width: 100%;
+}
+
+main footer .idea .img-container img,
+main footer .idea .img-container,
+main::after {
+  height: 100%;
+}
+
+main {
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-inline: clamp(1rem, 5%, 4rem);
+}
+main::after {
+  position: absolute;
+  right: 0;
+  content: "";
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.76),
+      rgba(255, 245, 245, 0.79)
+    ),
+    url(https://images.unsplash.com/photo-1504712598893-24159a89200e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80)
+      no-repeat 30% 50% / cover;
+  z-index: -1;
+}
+@media screen and (min-width: 53.75rem) {
+  main::after {
+    width: 60%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.17),
+        rgba(0, 0, 0, 0.08)
+      ),
+      url(https://images.unsplash.com/photo-1504712598893-24159a89200e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80)
+        no-repeat 77% 50% / cover;
+  }
+}
+main nav,
+main header,
+main footer {
+  grid-column: span 12;
+}
+main nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5em 0 0;
+}
+main nav .logo a {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+main nav .logo a:hover {
+  color: #fe8c4c;
+}
+@media screen and (min-width: 37.5rem) {
+  main nav .logo a {
+    font-size: 1.6rem;
+  }
+}
+main nav .menu i {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+main header {
+  padding: 0 clamp(1.5rem, 5%, 3.5rem);
+  align-self: center;
+  padding-block: min(20vh, 3rem);
+}
+main header h1 {
+  font-size: clamp(2.375rem, 1.3825rem + 4.9624vw, 6.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+main header a {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  margin-top: 1.4em;
+  font-size: 1rem;
+}
+@media screen and (min-width: 37.5rem) {
+  main header a {
+    font-size: 1.1rem;
+  }
+}
+main header a:hover {
+  color: #fe8c4c;
+}
+main header a i {
+  display: grid !important;
+  place-items: center;
+  background: #fe8c4c;
+  color: #ffffff;
+  width: 2.188rem;
+  height: 2.188rem;
+  border-radius: 50%;
+  margin-right: 0.625em;
+}
+@media screen and (min-width: 37.5rem) {
+  main header a i {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+main header a:hover i {
+  background: #111111;
+}
+main footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 0 2.5em 0;
+  flex-direction: column;
+  row-gap: 2.63em;
+}
+@media screen and (min-width: 53.75rem) {
+  main footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 60.5rem) {
+  main footer {
+    padding: 3.125em 0 3.125em 3.5em;
+  }
+}
+main footer .arrows {
+  gap: 0.625rem;
+  position: relative;
+  z-index: 10;
+  order: 1;
+}
+main footer .arrows i {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+main footer .arrows i:hover {
+  color: #fe8c4c;
+}
+main footer .idea {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  order: 2;
+  box-shadow: 0px 0.563rem 1.25rem rgba(0, 0, 0, 0.13);
+}
+@media screen and (min-width: 25rem) {
+  main footer .idea {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 53.75rem) {
+  main footer .idea {
+    position: absolute;
+    justify-content: initial;
+    max-height: 8.125rem;
+    box-shadow: none;
+  }
+}
+main footer .idea .img-container {
+  display: flex;
+  margin-left: auto;
+  overflow: hidden;
+  aspect-ratio: 3/2;
+}
+@media screen and (min-width: 53.75rem) {
+  main footer .idea .img-container {
+    width: 12.813rem;
+  }
+}
+main footer .idea .img-container img {
+  object-fit: cover;
+  display: block;
+  object-position: 50% 75%;
+  transition: 0.3s ease-in-out;
+}
+main footer .idea .img-container:hover img {
+  transform: scale(1.1);
+}
+@media screen and (min-width: 53.75rem) {
+  main footer .idea > div {
+    flex-basis: 40%;
+  }
+}
+main footer .idea .left-col {
+  text-align: right;
+}
+main footer .idea .right-col {
+  background: #e7ecf069;
+  display: grid;
+  align-content: center;
+  padding: 1.25em;
+  max-width: 24.375em;
+}
+@media screen and (min-width: 60.5rem) {
+  main footer .idea .right-col {
+    padding: 2.5em;
+  }
+}
+main footer .idea .right-col a {
+  font-size: 1rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 60.5rem) {
+  main footer .idea .right-col a {
+    font-size: 1.2rem;
+  }
+}
+main footer .idea .right-col a:hover {
+  text-decoration: underline;
+}
+main footer .idea .right-col a span {
+  font-weight: 800;
+}
+main footer .icons {
+  display: flex;
+  align-items: center;
+  gap: 0.938em;
+  position: relative;
+  z-index: 10;
+  order: 3;
+}
+main footer .icons i {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+main footer .icons i:hover {
+  color: #fe8c4c;
+}
